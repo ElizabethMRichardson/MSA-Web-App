@@ -1,6 +1,13 @@
 h1 {
     color: yellowgreen;
+    text-align: center;
 }
 p {
-    color: rebeccapurple;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 26px;
+}
+
+body{
+    background-color: lightslategrey;
 }
