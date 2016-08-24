@@ -1,7 +1,7 @@
+/// <reference path="typings/index.d.ts" />
 function apiConnection() {
     // Retrieve users custom sentence from URL query string
     //var inputValue = foo();
-    alert("Button Pressed!");
     var inputValue = document.getElementById('selectCity').value;
     // Make API call using custom sentence
     var xhr = new XMLHttpRequest();
@@ -12,14 +12,26 @@ function apiConnection() {
     var obj = JSON.parse(result);
     var city = obj.name;
     var test = obj.main.temp;
-    alert(test);
     // Modify text of HTML paragraph to display text returned by the API
     //id of paragraph- HTML element adding the api to
-    document.getElementById("result").innerHTML = result;
+    fillHtml(test);
+    //document.getElementById("result").innerHTML = result;
     document.getElementById("test").innerHTML = test;
 }
 ;
-// function setCity(){
-//var randomColor = '#' + (Math.random() * 0xFFFFFF << 0).toString(16);
-// var city = (<HTMLInputElement>document.getElementById('select1')).value;
-// }
+function fillHtml(temperature) {
+    document.getElementById("temp-heading").innerHTML = "The temperature is";
+    document.getElementById("temperature").innerHTML = temperature;
+    if (temperature <= 10) {
+        $('html').css('background', 'url(http://hdimagesnew.com/wp-content/uploads/2015/11/Snow-Wallpapers-9.jpg)');
+    }
+    else if (temperature > 10 && temperature < 20) {
+        $('html').css('background', 'url(http://api.ning.com/files/4zDRwQPj*wvbJIcxs69xMfKLdYDzvlY8yQ4-uOAoOwMkwzywLmeausNISnLHX02P8X8uO4kZYKnObGUWG**dTOW6RoqNBHo-/DSC02494.JPG)');
+    }
+    else if (temperature >= 20 && temperature < 30) {
+        $('html').css('background', 'url(http://feelgrafix.com/data_images/out/15/899365-sunny-day-wallpaper.jpg)');
+    }
+    else {
+        $('html').css('background', 'url(http://webneel.com/wallpaper/sites/default/files/images/08-2013/10-star-fish-sea-beach-sand-wallpaper.jpg)');
+    }
+}

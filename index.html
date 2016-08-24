@@ -1,43 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Weather or Not?</title>
+    <!--Boostrap's CSS-->
+    <link rel="stylesheet" type="text/css" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!--Custom CSS-->
     <link rel="stylesheet" href="styles.css">
-   <!-- <script type="text/javascript">
-     var appInsights=window.appInsights||function(config){
-    function r(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s=u.createElement(o),i,f;s.src=config.url||"//az416426.vo.msecnd.net/scripts/a/ai.0.js";u.getElementsByTagName(o)[0].parentNode.appendChild(s);try{t.cookie=u.cookie}catch(h){}for(t.queue=[],i=["Event","Exception","Metric","PageView","Trace","Dependency"];i.length;)r("track"+i.pop());return r("setAuthenticatedUserContext"),r("clearAuthenticatedUserContext"),config.disableExceptionTracking||(i="onerror",r("_"+i),f=e[i],e[i]=function(config,r,u,e,o){var s=f&&f(config,r,u,e,o);return s!==!0&&t["_"+i](config,r,u,e,o),s}),t
-    }({
-        instrumentationKey:"03bf627d-8fae-48c6-8289-169ff82a8e52"
-    });
-       
-    window.appInsights=appInsights;
-    appInsights.trackPageView();
-</script> -->
-<script type="text/javascript" src="apicall.js">
+   
+<!--<script type="text/javascript" src="apicall.js"></script>-->
 </head>
 <body>
+        <div class="container" id="page-container">
+            <h1 id="app-name">
+                <span class="glyphicon glyphicon-cloud"></span></span> Weather or Not?
+            </h1>
+            <h2 id="page-header">
+                ~~~~~
+            </h2>
 
-<h1>Index!</h1>
-
-<select id="selectCity" name="asd">
+        <select id="selectCity" name="asd">
         <option selected="selected" value="All">Choose City</option>
         <option value="London">London</option>
         <option value="Auckland">Auckland</option>
-        <option value="Melbourne">Melbourne</option>
+        <option value="Sydney">Sydney</option>
         <option value="Christchurch">Christchurch</option>
+        <option value="Santorini">Santorini</option>
         </select>
 
         <button onclick="apiConnection()">Go!</button>
 
-<a href="redirect.html">Redirect</a>
-<p></p>
-<p>Result:</p>
-<div id="result"></div>
-<p>Test:</p>
-<div id="test"></div>
-<p>Split:</p>
-<div id="split"></div>
+        <div id= "temp-heading"></div>
+
+        <div id="temperature"></div>
+           
+        </div>
 
 
 
-</body>
+        <!--jQuery Script-->
+        <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+        <!--Bootstrap Script-->
+        <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!--Custom Script-->
+        <script src="./apicall.js"></script>
+
+        <script>$('#temperature').html('Hello World');</script>
+
+    </body>
 </html>
