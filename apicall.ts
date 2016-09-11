@@ -33,6 +33,7 @@ function fillHtml(temperature){
 
     if(temperature <= 10){
         $('html').css('background', 'url(http://hdimagesnew.com/wp-content/uploads/2015/11/Snow-Wallpapers-9.jpg)');
+       playSound('song1.mp3');
        // document.body.style.backgroundImage = "url('http://webneel.com/wallpaper/sites/default/files/images/08-2013/10-star-fish-sea-beach-sand-wallpaper.jpg')";
     }
     else if(temperature > 10 && temperature < 20){
@@ -48,4 +49,15 @@ function fillHtml(temperature){
 
     }
 
+}
+
+function playSound(url){
+  var audio = document.createElement('audio');
+  audio.style.display = "none";
+  audio.src = url;
+  audio.autoplay = true;
+  audio.onended = function(){
+    audio.remove() //Remove when played.
+  };
+  document.body.appendChild(audio);
 }
