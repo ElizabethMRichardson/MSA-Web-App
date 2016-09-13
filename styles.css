@@ -15,8 +15,9 @@ h1#app-name {
     font-size:84px;
 }
 
-h2#page-header {
-    padding-top:20px;
+h2#sub-head {
+    font-size:20px;
+    padding-top:5px;
     padding-bottom:20px;
 }
 
@@ -37,9 +38,10 @@ body #temperature {
     font-size:20px;
 }
 
-button#refreshbtn {
-    display:none;
+button #go-button{
+    color: black;
 }
+
 .btn-wrapper {
     padding: 20px 0;
 }
