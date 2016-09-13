@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Weather or Not?</title>
+    <title>Weatther or Not?</title>
     <!--Boostrap's CSS-->
     <link rel="stylesheet" type="text/css" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
     <!--Custom CSS-->
@@ -14,6 +14,9 @@
             <h1 id="app-name">
                 <span class="glyphicon glyphicon-cloud"></span></span> Weather or Not?
             </h1>
+            <h2 id="page-header">
+                ~~~~~
+            </h2>
 
         <select id="selectCity" name="asd">
         <option selected="selected" value="All">Choose City</option>
@@ -26,10 +29,12 @@
 
         <button onclick="apiConnection()">Go!</button>
 
+        <div id= "temp-heading"></div>
+
         <div id="temperature"></div>
-        <div id="message"></div>
-    
-        <iframe id="spotify" src="about:blank" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+
+        <iframe id="spotify" src="about:blank" width="300" height="80" frameborder="0" allowtransparency="true"></iframe>
+           
         </div>
 
 
@@ -40,6 +45,8 @@
         <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
         <!--Custom Script-->
         <script src="./apicall.js"></script>
+
+        <script>$('#temperature').html('Hello World');</script>
 
     </body>
 </html>
