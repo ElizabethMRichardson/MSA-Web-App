@@ -70,6 +70,6 @@ function fillHtml(temperature, weather, desc) {
         $('html').css('background-size', 'cover');
         spotifySrc = "https://embed.spotify.com/?uri=spotify:user:spotify_uk_:playlist:3V1WI57CMyQdmxy3aibCB4&theme=white";
     }
-    document.getElementById("temp-heading").innerHTML = "The temperature is " + temperature + " and the weather is " + desc;
+    document.getElementById("temp-heading").innerHTML = "The temperature is " + temperature + " and the weather is " + desc + ". Enjoy this playlist:";
     $('#spotify').attr('src', spotifySrc);
 }
